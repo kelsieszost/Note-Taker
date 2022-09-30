@@ -26,4 +26,4 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 ## Usage
 
 Get Started Screenshot:
-<img src = "./assests/images/get_started.png"></img>
+<img src = "./public/assests/images/get_started.png"></img>
