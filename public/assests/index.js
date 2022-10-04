@@ -46,3 +46,19 @@ const getNotes = () =>
       'Content-Type': 'application/json',
     },
   });
+
+  const renderNewNote = () => {
+    hide(saveNoteBtn);
+  
+    if (newNote.id) {
+      title.setAttribute('readonly', true);
+      text.setAttribute('readonly', true);
+      title.value = newNote.title;
+      text.value = newNote.text;
+    } else {
+      title.value = '';
+      text.value = '';
+      title.readOnly = false;
+      text.readOnly = false;
+    }
+  };
