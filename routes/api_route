@@ -18,7 +18,7 @@ module.exports = function (app) {
 
         app.post('/api/notes', function(req, res) {
             
-            const newNote = {
+            const activeNote = {
                 title: req.body.title,
                 text: req.body.text,
                 id: generateId({
@@ -27,7 +27,7 @@ module.exports = function (app) {
                     useNumbers: true
                 })
             };
-            notes.push(newNote);
+            notes.push(activeNote);
             updateNotes(notes);
             res.json(notes);
         })
